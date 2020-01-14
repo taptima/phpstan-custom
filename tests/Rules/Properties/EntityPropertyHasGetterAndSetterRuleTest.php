@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace Taptima\PHPStan\Rules\Properties;
 
@@ -8,15 +10,12 @@ use PHPStan\Type\Doctrine\ObjectMetadataResolver;
 
 /**
  * @extends RuleTestCase<EntityPropertyHasGetterAndSetterRule>
+ *
+ * @internal
+ * @coversNothing
  */
 class EntityPropertyHasGetterAndSetterRuleTest extends RuleTestCase
 {
-
-    protected function getRule(): Rule
-    {
-        return new EntityPropertyHasGetterAndSetterRule(new ObjectMetadataResolver(__DIR__ . '/entity-manager.php', null));
-    }
-
     public function testRule(): void
     {
         $this->analyse([__DIR__ . '/data/Entity.php'], [
@@ -64,5 +63,10 @@ class EntityPropertyHasGetterAndSetterRuleTest extends RuleTestCase
     public function testEntityWithCollectionField(): void
     {
         $this->analyse([__DIR__ . '/data/EntityWithCollection.php'], []);
+    }
+
+    protected function getRule(): Rule
+    {
+        return new EntityPropertyHasGetterAndSetterRule(new ObjectMetadataResolver(__DIR__ . '/entity-manager.php', null));
     }
 }

@@ -43,6 +43,7 @@ class EntityWithCollection
 
     /**
      * @param Item $item
+     *
      * @return EntityWithCollection
      */
     public function addItem(Item $item)
@@ -54,6 +55,7 @@ class EntityWithCollection
 
     /**
      * @param Item $item
+     *
      * @return EntityWithCollection
      */
     public function removeItem(Item $item)

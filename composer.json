@@ -18,6 +18,7 @@
         "doctrine/common": "^2.7",
         "doctrine/orm": "^2.5",
         "ergebnis/composer-normalize": "^2.0.2",
+        "friendsofphp/php-cs-fixer": "^2.16",
         "jakub-onderka/php-parallel-lint": "^1.0",
         "phing/phing": "^2.16.0",
         "phpstan/phpstan-phpunit": "^0.12",

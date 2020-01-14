@@ -60,6 +60,32 @@
         </exec>
     </target>
 
+    <target name="cs">
+        <exec
+                executable="vendor/bin/php-cs-fixer"
+                logoutput="true"
+                passthru="true"
+                checkreturn="true"
+        >
+            <arg value="fix"/>
+            <arg path="--verbose"/>
+            <arg path="--dry-run"/>
+        </exec>
+    </target>
+
+    <target name="cs-fix">
+        <exec
+                executable="vendor/bin/php-cs-fixer"
+                logoutput="true"
+                passthru="true"
+                checkreturn="true"
+        >
+            <arg value="fix"/>
+            <arg path="--verbose"/>
+            <arg path=""/>
+        </exec>
+    </target>
+
     <target name="tests">
         <exec
                 executable="vendor/bin/phpunit"

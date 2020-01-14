@@ -79,6 +79,7 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
         }
 
         $propertyName = (string) $node->name;
+
         try {
             $class->getNativeProperty($propertyName);
         } catch (MissingPropertyFromReflectionException $e) {

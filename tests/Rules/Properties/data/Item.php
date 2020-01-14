@@ -80,5 +80,4 @@ class Item
     {
         return $this->entityWithCollection;
     }
-
 }
