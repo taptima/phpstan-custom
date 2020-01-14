@@ -1,0 +1,13 @@
+includes:
+    - rules.neon
+    - extension.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-doctrine/rules.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+    excludes_analyse:
+        - tests/*/data/*

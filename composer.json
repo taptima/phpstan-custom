@@ -1,0 +1,53 @@
+{
+    "name": "taptima/phpstan-custom",
+    "type": "phpstan-extension",
+    "description": "Taptima extensions for PHPStan",
+    "license": "proprietary",
+    "require": {
+        "php": "~7.1",
+        "phpstan/phpstan": "^0.12.2",
+        "phpstan/phpstan-doctrine": "^0.12.9"
+    },
+    "conflict": {
+        "doctrine/collections": "<1.0",
+        "doctrine/common": "<2.7",
+        "doctrine/orm": "<2.5"
+    },
+    "require-dev": {
+        "doctrine/collections": "^1.0",
+        "doctrine/common": "^2.7",
+        "doctrine/orm": "^2.5",
+        "ergebnis/composer-normalize": "^2.0.2",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phing/phing": "^2.16.0",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "phpstan/phpstan-strict-rules": "^0.12",
+        "phpunit/phpunit": "^7.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "phpstan": {
+            "includes": [
+                "extension.neon",
+                "rules.neon"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Taptima\\PHPStan\\": "src/Taptima/PHPStan"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

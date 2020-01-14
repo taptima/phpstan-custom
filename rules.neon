@@ -1,0 +1,2 @@
+rules:
+    - Taptima\PHPStan\Rules\Properties\EntityPropertyHasGetterAndSetterRule
