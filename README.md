@@ -11,18 +11,8 @@ This extension provides following features:
 
 ## Installation
 
-Before you make `composer require` in your project, you must specify the path to the repository.
-To do this, add the lines in the composer.json file:
-```
-"repositories": [
-  {
-    "type": "git",
-    "url": "git@gitlab.fac.im:taptima/phpstan-custom.git"
-  }
-]
-```
+`composer require taptima/phpstan-custom`
 
-After that do `composer require taptima/phpstan-custom`.
 Then include extension.neon in your project's PHPStan config:
 
 ```neon
