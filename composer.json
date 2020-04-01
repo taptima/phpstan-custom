@@ -2,7 +2,18 @@
     "name": "taptima/phpstan-custom",
     "type": "phpstan-extension",
     "description": "Taptima extensions for PHPStan",
-    "license": "proprietary",
+    "keywords": [
+        "phpstan",
+        "phpstan-rules",
+        "Code Quality"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Tertishniy",
+            "email": "mtertishniy@gmail.com"
+        }
+    ],
     "require": {
         "php": "~7.1",
         "phpstan/phpstan": "^0.12.2",
