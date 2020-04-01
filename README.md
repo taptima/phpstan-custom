@@ -11,7 +11,7 @@ This extension provides following features:
 ## Installation
 Open a command console, enter your project directory and execute the following command to download the latest stable version of this extension:
 ```bash
-composer require --dev taptima/phpstan-custom
+composer require --dev taptima/phpstan-custom dev-master
 ```
 
 Then include extension.neon in your project's PHPStan config:
