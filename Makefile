@@ -13,6 +13,3 @@ cs-dry-run:
 
 c-inst:
 	vendor/bin/phing composer
-
-gen-doc:
-	tools/doc > README.md

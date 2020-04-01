@@ -1,4 +1,4 @@
-# Taptima customs extensions for PHPStan
+# [Taptima](https://taptima.ru/) customs extensions for PHPStan
 
 * [PHPStan](https://github.com/phpstan/phpstan)
 
@@ -10,8 +10,10 @@ This extension provides following features:
 * Validates `ArrayCollection` entity properties for existing methods `add*`, `remove*` and `get*`.
 
 ## Installation
-
-`composer require taptima/phpstan-custom`
+Open a command console, enter your project directory and execute the following command to download the latest stable version of this extension:
+```bash
+composer require --dev taptima/phpstan-custom
+```
 
 Then include extension.neon in your project's PHPStan config:
 
@@ -29,3 +31,13 @@ includes:
 
 This extensions depends on [phpstan-doctrine](https://github.com/phpstan/phpstan-doctrine), so you have to configure it.
 
+## Contribution
+
+Before to create a pull request to submit your contributon, you must:
+ - run tests and be sure nothing is broken
+
+### How to run tests
+
+```bash
+make test
+```
