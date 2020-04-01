@@ -4,10 +4,9 @@
 
 This extension provides following features:
 
-
-* Validates common entity properties for existing methods `set*`, `get*`.
-* Validates boolean entity properties for existing methods `set*`, `is*` or `has*`.
-* Validates `ArrayCollection` entity properties for existing methods `add*`, `remove*` and `get*`.
+* Validates common entity properties existence of methods `set*`, `get*`.
+* Validates boolean entity properties existence of methods `set*`, `is*` or `has*`.
+* Validates `ArrayCollection` entity properties existence of methods `add*`, `remove*` and `get*`.
 
 ## Installation
 Open a command console, enter your project directory and execute the following command to download the latest stable version of this extension:
