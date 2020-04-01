@@ -1,5 +1,8 @@
 # [Taptima](https://taptima.ru/) customs extensions for PHPStan
 
+[![Latest Stable Version](https://poser.pugx.org/taptima/phpstan-custom/v/stable)](https://packagist.org/packages/taptima/phpstan-custom)
+[![License](https://poser.pugx.org/taptima/phpstan-custom/license)](https://packagist.org/packages/taptima/phpstan-custom)
+
 * [PHPStan](https://github.com/phpstan/phpstan)
 
 This extension provides following features:
@@ -21,7 +24,7 @@ includes:
     - vendor/taptima/phpstan-custom/extension.neon
 ```
 
-and 
+and
 
 ```neon
 includes:
