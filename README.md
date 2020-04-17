@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/taptima/phpstan-custom/v/stable)](https://packagist.org/packages/taptima/phpstan-custom)
 [![License](https://poser.pugx.org/taptima/phpstan-custom/license)](https://packagist.org/packages/taptima/phpstan-custom)
 
-* [PHPStan](https://github.com/phpstan/phpstan)
+* [PHPStan](https://phpstan.org/)
 
 This extension provides following features:
 
