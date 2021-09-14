@@ -67,6 +67,8 @@ class EntityPropertyHasGetterAndSetterRuleTest extends RuleTestCase
 
     protected function getRule(): Rule
     {
-        return new EntityPropertyHasGetterAndSetterRule(new ObjectMetadataResolver(__DIR__ . '/entity-manager.php', null));
+        $reflection = $this->createReflectionProvider();
+
+        return new EntityPropertyHasGetterAndSetterRule(new ObjectMetadataResolver($reflection, __DIR__ . '/entity-manager.php', null));
     }
 }

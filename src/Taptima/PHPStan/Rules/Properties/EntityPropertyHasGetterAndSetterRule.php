@@ -112,6 +112,7 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
      * @throws ShouldNotHappenException
      *
      * @return array
+     * @phpstan-ignore-next-line
      */
     private function checkCommonProperty(ClassMetadataInfo $metadata, ClassReflection $class, array $fieldMapping, $propertyName)
     {
@@ -163,6 +164,7 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
      * @throws ShouldNotHappenException
      *
      * @return array
+     * @phpstan-ignore-next-line
      */
     private function checkAssociationProperty(ClassReflection $class, array $associationMapping, $propertyName)
     {
