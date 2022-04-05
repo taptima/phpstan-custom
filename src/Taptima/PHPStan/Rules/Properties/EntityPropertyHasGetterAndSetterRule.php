@@ -5,8 +5,7 @@ declare(strict_types=1);
 namespace Taptima\PHPStan\Rules\Properties;
 
 use Doctrine\Common\Inflector\Inflector;
-use Doctrine\DBAL\Types\Type;
-use Doctrine\ORM\Mapping\ClassMetadata;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use PhpParser\Node;
 use PHPStan\Analyser\Scope;
@@ -114,8 +113,8 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
      * @return array
      * @phpstan-ignore-next-line
      */
-    private function checkCommonProperty(ClassMetadataInfo $metadata, ClassReflection $class, array $fieldMapping, $propertyName)
-    {
+    private function checkCommonProperty(ClassMetadataInfo $metadata, ClassReflection $class, array $fieldMapping, $propertyName): array
+	{
         $messages = [];
 
         $setter = sprintf('set%s', ucfirst($propertyName));
@@ -127,7 +126,7 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
             $messages[] = $this->buildError($class, $propertyName, sprintf('must have a setter "%s"', $setter));
         }
 
-        if ($fieldMapping['type'] !== Type::BOOLEAN) {
+        if ($fieldMapping['type'] !== Types::BOOLEAN) {
             if (!$class->hasMethod($getter)) {
                 $messages[] = $this->buildError($class, $propertyName, sprintf('must have a getter "%s"', $getter));
             }
@@ -175,7 +174,7 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
             $messages[] = $this->buildError($class, $propertyName, sprintf('must have a getter "%s"', $getter));
         }
 
-        if ($associationMapping['type'] !== ClassMetadata::ONE_TO_MANY && $associationMapping['type'] !== ClassMetadata::MANY_TO_MANY) {
+        if ($associationMapping['type'] !== ClassMetadataInfo::ONE_TO_MANY && $associationMapping['type'] !== ClassMetadataInfo::MANY_TO_MANY) {
             $setter = sprintf('set%s', ucfirst($propertyName));
             if (!$class->hasMethod($getter)) {
                 $messages[] = $this->buildError($class, $propertyName, sprintf('must have a setter "%s"', $setter));
