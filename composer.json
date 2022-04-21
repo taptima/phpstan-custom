@@ -27,7 +27,7 @@
     "require-dev": {
         "doctrine/collections": "^1.6",
         "doctrine/common": "^3.2",
-        "doctrine/inflector": "^1.0",
+        "doctrine/inflector": "^2.0",
         "doctrine/orm": "2.11.*",
         "ergebnis/composer-normalize": "^2.25",
         "friendsofphp/php-cs-fixer": "^3.8",

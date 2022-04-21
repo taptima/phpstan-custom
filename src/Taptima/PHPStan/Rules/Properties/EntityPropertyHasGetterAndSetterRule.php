@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Taptima\PHPStan\Rules\Properties;
 
-use Doctrine\Common\Inflector\Inflector;
 use Doctrine\DBAL\Types\Types;
+use Doctrine\Inflector\InflectorFactory;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use PhpParser\Node;
 use PHPStan\Analyser\Scope;
@@ -187,7 +187,10 @@ final class EntityPropertyHasGetterAndSetterRule implements Rule
         $removers   = [];
         $hasAdder   = false;
         $hasRemover = false;
-        $singulars  = (array) Inflector::singularize($propertyName);
+
+		$inflector = InflectorFactory::create()->build();
+		$singulars  = (array) $inflector->singularize($propertyName);
+
         foreach ($singulars as $singular) {
             $adder   = sprintf('add%s', ucfirst($singular));
             $remover = sprintf('remove%s', ucfirst($singular));
